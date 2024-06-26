@@ -27,7 +27,8 @@ abstract class ChatScreenMixin extends Screen {
         if (style != null && style.getClickEvent() != null && style.getHoverEvent() == null) {
             var text = SafeChatClicks.getActionText(style);
             if (text != null) {
-                context.drawOrderedTooltip(textRenderer, textRenderer.wrapLines(text, 210), mouseX, mouseY);
+                assert this.client != null;
+                context.drawOrderedTooltip(textRenderer, textRenderer.wrapLines(text, Math.max(this.client.getWindow().getScaledWidth() / 2, 200)), mouseX, mouseY);
             }
         }
     }
