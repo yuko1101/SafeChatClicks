@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "safechatclicks",
+  "version": "${version}",
+  "name": "SafeChatClicks",
+  "description": "Show the command or link that is run/opened on click.",
+  "authors": [
+    "yuko1101"
+  ],
+  "contact": {
+    "website": "https://github.com/yuko1101/SafeChatClicks",
+    "repo": "https://github.com/yuko1101/SafeChatClicks"
+  },
+  "license": "MIT",
+  "icon": "assets/safechatclicks/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "io.github.yuko1101.safechatclicks.SafeChatClicks"
+    ]
+  },
+  "mixins": [
+    "safechatclicks.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": ">=${minecraft_version}"
+  }
+}
